@@ -2,127 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Portfolio Design System */
-
 @layer base {
-  :root {
-    /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+  :root, .dark {
+    /* Base colors - Black & Neon Blue */
+    --background: 0 0% 2%; /* Very dark black/slate */
+    --foreground: 0 0% 100%; /* White text */
     
     /* Card system */
-    --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card: 220 50% 5%; /* Slight blue tint to black */
+    --card-foreground: 0 0% 100%;
     
-    /* Primary brand colors */
-    --primary: 234 89% 64%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 234 89% 75%;
+    /* Primary colors - Neon Blue */
+    --primary: 190 100% 50%; /* #00d4ff Neon Blue */
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 190 100% 50%;
     
     /* Secondary colors */
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 210 11% 15%;
+    --secondary: 220 50% 10%;
+    --secondary-foreground: 190 100% 50%;
     
     /* Muted colors */
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 65%;
     
     /* Accent colors */
-    --accent: 234 89% 64%;
+    --accent: 190 100% 30%;
     --accent-foreground: 0 0% 100%;
     
     /* Status colors */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 0%;
     
     /* Border and input */
-    --border: 214.3 31.8% 91.4%;
-    --input: 220 13% 91%;
-    --ring: 234 89% 64%;
+    --border: 220 20% 15%;
+    --input: 220 50% 10%;
+    --ring: 190 100% 50%;
     
     /* Design tokens */
-    --radius: 0.75rem;
+    --radius: 1rem;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(234 89% 64%), hsl(234 89% 75%));
-    --gradient-background: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 99%));
-    
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
-    --shadow-glow: 0 0 30px hsl(234 89% 64% / 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    /* Base colors - Dark theme */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    
-    /* Card system - Dark theme */
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    
-    /* Primary colors stay consistent */
-    --primary: 234 89% 64%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 234 89% 75%;
-    
-    /* Secondary colors - Dark theme */
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    
-    /* Muted colors - Dark theme */
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    
-    /* Accent colors - Dark theme */
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    
-    /* Status colors - Dark theme */
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    
-    /* Border and input - Dark theme */
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 234 89% 64%;
-    
-    /* Dark theme gradients */
-    --gradient-background: linear-gradient(180deg, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 17.5%));
-    --gradient-card: linear-gradient(145deg, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 15%));
-    
-    /* Sidebar colors */
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-primary: linear-gradient(135deg, hsl(190 100% 40%), hsl(210 100% 50%));
+    --gradient-background: linear-gradient(to bottom right, hsl(0 0% 2%), hsl(220 50% 5%));
+    --gradient-card: linear-gradient(145deg, hsl(220 50% 8%), hsl(220 50% 4%));
   }
 }
 
@@ -132,6 +54,38 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased font-sans;
+    overflow-x: hidden;
   }
+  
+  ::selection {
+    @apply bg-primary/30 text-primary;
+  }
+}
+
+/* Custom laser animation */
+@keyframes moving-laser {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; box-shadow: 0 0 20px 2px rgba(0, 212, 255, 0.3); }
+  50% { opacity: 0.6; box-shadow: 0 0 40px 5px rgba(0, 212, 255, 0.6); }
+}
+
+.animate-laser {
+  animation: moving-laser 8s linear infinite;
+}
+
+.animate-laser-delayed {
+  animation: moving-laser 12s linear infinite;
+  animation-delay: 4s;
+}
+
+.animate-laser-fast {
+  animation: moving-laser 6s linear infinite;
+  animation-delay: 2s;
 }

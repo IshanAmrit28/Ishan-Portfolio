@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
-import { Github, Linkedin, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,19 +28,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-lg shadow-sm border-b border-border" : "bg-transparent py-4"}`}>
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <div 
-          className="text-2xl font-black tracking-tighter bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity" 
-          onClick={() => scrollToSection('about')}
-        >
-          Ishan.
-        </div>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "pt-4" : "pt-6"}`}>
+      <div className="container mx-auto px-6 flex justify-center">
+        <div className={`flex items-center justify-between w-full max-w-4xl rounded-full px-6 py-3 transition-all duration-300 bg-background/70 backdrop-blur-xl border border-primary/20 shadow-[0_0_20px_rgba(0,212,255,0.1)]`}>
+          
+          {/* Logo */}
+          <div 
+            className="text-xl font-bold cursor-pointer text-white hover:text-primary transition-colors" 
+            onClick={() => scrollToSection('about')}
+          >
+            Ishan<span className="text-primary">.</span>
+          </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          <div className="flex items-center gap-6">
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <button 
                 key={link.id}
@@ -54,49 +52,32 @@ const Navbar = () => {
               </button>
             ))}
           </div>
-          
-          <div className="flex items-center gap-4 border-l border-border pl-6">
-            <a href="https://github.com/IshanAmrit28" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href="https://www.linkedin.com/in/naruto404" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <ThemeToggle />
-          </div>
-        </div>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-muted-foreground hover:text-primary transition-colors focus:outline-none"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-1 text-white hover:text-primary transition-colors focus:outline-none"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl shadow-lg border-b border-border py-6 flex flex-col items-center gap-6 animate-in slide-in-from-top-2">
-          {navLinks.map((link) => (
-            <button 
-              key={link.id}
-              onClick={() => scrollToSection(link.id)} 
-              className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {link.name}
-            </button>
-          ))}
-          <div className="flex gap-6 mt-4 pt-6 border-t border-border/50 w-2/3 justify-center">
-            <a href="https://github.com/IshanAmrit28" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/naruto404" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </a>
+        <div className="md:hidden absolute top-full left-0 w-full px-6 pt-4">
+          <div className="bg-background/90 backdrop-blur-xl border border-primary/20 rounded-2xl py-4 flex flex-col gap-2 shadow-[0_0_30px_rgba(0,212,255,0.15)]">
+            {navLinks.map((link) => (
+              <button 
+                key={link.id}
+                onClick={() => scrollToSection(link.id)} 
+                className="text-lg font-medium text-center text-muted-foreground hover:text-primary transition-colors py-3"
+              >
+                {link.name}
+              </button>
+            ))}
           </div>
         </div>
       )}
