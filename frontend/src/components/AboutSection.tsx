@@ -1,180 +1,73 @@
-// import profilePhoto from '@/assets/profile-photo.jpeg';
-// import resume from '@/assets/Resume.pdf'; 
-// import { Button } from '@/components/ui/button';
-// import { Download } from 'lucide-react';
-
-// const AboutSection = () => {
-//   return (
-//     <section id="about" className="min-h-screen flex items-center py-20 bg-gradient-background">
-//       <div className="container mx-auto px-6">
-//         <div className="grid lg:grid-cols-2 gap-12 items-center">
-//           {/* Photo */}
-//           <div className="relative">
-//             <div className="relative w-80 h-80 mx-auto lg:mx-0">
-//               <div className="absolute inset-0 bg-gradient-primary rounded-2xl transform rotate-6 opacity-20"></div>
-//               <div className="relative bg-gradient-card rounded-2xl p-2 shadow-lg">
-//                 <img
-//                   src={profilePhoto}
-//                   alt="Profile"
-//                   className="w-full h-full object-cover rounded-xl"
-//                 />
-//               </div>
-//               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
-//             </div>
-//           </div>
-
-          
-//           <div className="text-center lg:text-left">
-//             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-//               <span className="block text-foreground">Hello, I'm</span>
-//               <span className="bg-gradient-primary bg-clip-text text-transparent">
-//                 Ishan Amrit Srivastava
-//               </span>
-//             </h1>
-            
-//             <div className="text-xl text-muted-foreground mb-8 leading-relaxed">
-//               <p>
-//                 I am a final-year Computer Science student at VIT Bhopal, deeply passionate about technology and its potential to transform ideas into impactful solutions. I have a strong curiosity for learning and constantly explore emerging tools, frameworks, and concepts across software development, cloud computing, and artificial intelligence. Building efficient, scalable, and user-friendly applications excites me, and I thrive in environments that challenge me to grow my technical and problem-solving skills. Beyond coding, I enjoy experimenting with new technologies, staying updated with industry trends, and pushing the boundaries of what can be created. My approach combines creativity, logical thinking, and a relentless drive to turn concepts into reality, reflecting my commitment to continuous learning and innovation.
-//               </p>
-//             </div>
-
-//             <a
-//   href={resume}
-//   target="_blank"
-//   rel="noopener noreferrer"
-//   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-full shadow-md hover:shadow-lg transition-all"
-// >
-//   <Download className="w-4 h-4" />
-//   Download Resume
-// </a>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutSection;
-
-
-// import profilePhoto from '@/assets/profile-photo.jpeg';
-// import resume from '@/assets/Resume.pdf'; 
-// import { Download } from 'lucide-react';
-
-// const AboutSection = () => {
-//   return (
-//     <section id="about" className="min-h-screen flex items-center py-20 bg-gradient-background">
-//       <div className="container mx-auto px-6">
-//         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
-//           {/* Photo */}
-//           <div className="relative w-64 h-64 mx-auto lg:mx-0 lg:w-80 lg:h-80">
-//             {/* Decorative rotated background (only for lg screens) */}
-//             <div className="absolute inset-0 bg-gradient-primary rounded-2xl transform rotate-6 opacity-20 hidden lg:block"></div>
-
-//             <div className="relative bg-gradient-card rounded-2xl p-2 shadow-lg overflow-hidden">
-//               <img
-//                 src={profilePhoto}
-//                 alt="Profile"
-//                 className="w-full h-full object-cover rounded-xl"
-//               />
-//             </div>
-
-//             {/* Animated circle (only for lg screens) */}
-//             <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
-//           </div>
-
-//           {/* About Content */}
-//           <div className="text-center lg:text-left mt-8 lg:mt-0">
-//             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-//               <span className="block text-foreground">Hello, I'm</span>
-//               <span className="bg-gradient-primary bg-clip-text text-transparent">
-//                 Ishan Amrit Srivastava
-//               </span>
-//             </h1>
-            
-//             <div className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-//               <p>
-//                 I am a final-year Computer Science student at VIT Bhopal, deeply passionate about technology and its potential to transform ideas into impactful solutions. I have a strong curiosity for learning and constantly explore emerging tools, frameworks, and concepts across software development, cloud computing, and artificial intelligence. Building efficient, scalable, and user-friendly applications excites me, and I thrive in environments that challenge me to grow my technical and problem-solving skills. Beyond coding, I enjoy experimenting with new technologies, staying updated with industry trends, and pushing the boundaries of what can be created. My approach combines creativity, logical thinking, and a relentless drive to turn concepts into reality, reflecting my commitment to continuous learning and innovation.
-//               </p>
-//             </div>
-
-//             {/* Resume Button */}
-//             <a
-//               href={resume}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-full shadow-md hover:shadow-lg transition-all"
-//             >
-//               <Download className="w-4 h-4" />
-//               Download Resume
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutSection;
-
-
-
 import profilePhoto from '@/assets/profile-photo.jpeg';
 import resume from '@/assets/Resume.pdf'; 
-import { Download } from 'lucide-react';
+import { Download, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center py-20 bg-gradient-background">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-          {/* Photo */}
-          <div className="flex justify-center lg:justify-start lg:pl-12">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem]">
-              
-              {/* Decorative rotated background (only for lg screens) */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-2xl transform rotate-6 opacity-20 hidden lg:block"></div>
-
-              <div className="relative bg-gradient-card rounded-2xl p-2 shadow-lg overflow-hidden">
-                <img
-                  src={profilePhoto}
-                  alt="Profile"
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
-
-              {/* Animated circle (only for lg screens) */}
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20 animate-pulse"></div>
-            </div>
-          </div>
-
+    <section id="about" className="min-h-screen flex items-center pt-32 pb-20 bg-gradient-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl -z-10 animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      
+      <div className="container mx-auto px-6 z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
           {/* About Content */}
-          <div className="text-center lg:text-left mt-8 lg:mt-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="block text-foreground">Hello, I'm</span>
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              Available for opportunities
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight leading-tight">
+              <span className="block text-foreground mb-2">Hello, I'm</span>
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Ishan Amrit Srivastava
               </span>
             </h1>
             
-            <div className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-              <p>
-                I am a final-year Computer Science student at VIT Bhopal, deeply passionate about technology and its potential to transform ideas into impactful solutions. I have a strong curiosity for learning and constantly explore emerging tools, frameworks, and concepts across software development, cloud computing, and artificial intelligence. Building efficient, scalable, and user-friendly applications excites me, and I thrive in environments that challenge me to grow my technical and problem-solving skills. Beyond coding, I enjoy experimenting with new technologies, staying updated with industry trends, and pushing the boundaries of what can be created. My approach combines creativity, logical thinking, and a relentless drive to turn concepts into reality, reflecting my commitment to continuous learning and innovation.
-              </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              I am a final-year Computer Science student at VIT Bhopal, deeply passionate about technology and its potential to transform ideas into impactful solutions. I constantly explore emerging tools across software development, cloud computing, and artificial intelligence. 
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="w-full sm:w-auto gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg hover:shadow-glow transition-all duration-300">
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </Button>
+              </a>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 rounded-full border-primary/20 hover:bg-primary/5 transition-all duration-300" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+                View Projects
+                <ChevronRight className="w-4 h-4" />
+              </Button>
             </div>
+          </div>
 
-            {/* Resume Button */}
-            <a
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-medium rounded-full shadow-md hover:shadow-lg transition-all"
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
-            </a>
+          {/* Photo */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="relative group">
+              {/* Decorative shapes */}
+              <div className="absolute -inset-1 bg-gradient-primary rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute inset-0 bg-gradient-primary rounded-3xl transform rotate-6 opacity-30 group-hover:rotate-12 transition-transform duration-500 hidden md:block"></div>
+              <div className="absolute inset-0 bg-gradient-primary rounded-3xl transform -rotate-3 opacity-30 group-hover:-rotate-6 transition-transform duration-500 hidden md:block"></div>
+              
+              <div className="relative bg-card rounded-2xl p-2 shadow-xl border border-border/50 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 z-10 overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-500">
+                <img
+                  src={profilePhoto}
+                  alt="Ishan Amrit Srivastava"
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
