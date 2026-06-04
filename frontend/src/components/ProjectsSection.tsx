@@ -4,43 +4,43 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "CareerByte (AI Interview Platform)",
-      description: "An advanced AI-powered platform for realistic interview simulations, featuring voice, video, and performance analytics.",
-      tech: ["React", "Node.js", "AI / ML", "Cloudinary"],
+      description: "A comprehensive developer preparation platform featuring an interactive coding playground, global contests, AI-powered interview simulations, and leaderboards.",
+      tech: ["React", "Node.js", "Redux", "Gemini AI", "Docker"],
       github: "https://github.com/IshanAmrit28/CareerByte",
       demo: "https://career-byte.vercel.app/"
     },
     {
-      title: "Cardiovascular Disease Detection",
-      description: "A predictive healthcare application leveraging machine learning models to analyze medical data for early CVD detection.",
-      tech: ["Python", "Machine Learning", "Data Modeling"],
+      title: "CVD Detection via Retinal Images",
+      description: "An end-to-end Machine Learning web application designed to assess the likelihood of Cardiovascular Disease from high-resolution retinal images.",
+      tech: ["Python", "Machine Learning", "Streamlit", "Node.js"],
       github: "https://github.com/IshanAmrit28/CVD-Detection-using-retinal-images",
       demo: "https://cvd-detection-using-retinal-images.streamlit.app/"
     },
     {
       title: "Naruto Programming Language",
-      description: "A custom-built interpreted programming language with its own syntax, lexer, parser, and evaluator inspired by anime.",
-      tech: ["TypeScript", "Compilers", "AST"],
+      description: "A custom, statically typed, interpreted programming language built entirely in C++, featuring a rich type system, control flow, and a classic interpreter pipeline.",
+      tech: ["C++", "Compilers", "AST", "Interpreters"],
       github: "https://github.com/IshanAmrit28/NARUTO",
       demo: "https://naruto-playground.vercel.app/"
     },
     {
-      title: "Full-Stack Chat Application",
-      description: "Real-time messaging platform with user authentication, online status tracking, and instant message delivery.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+      title: "Vibe - Realtime Chat Application",
+      description: "A modern, full-stack real-time messaging application with a beautiful dark mode UI, seamless image sharing, and instant message delivery using Socket.IO.",
+      tech: ["React", "Node.js", "Socket.IO", "Zustand"],
       github: "https://github.com/IshanAmrit28/ChatApp",
       demo: "https://chat-app-five-roan-35.vercel.app/"
     },
     {
-      title: "Smart Expense Tracker",
-      description: "A comprehensive dashboard for tracking personal finances, visualizing spending habits, and managing budgets.",
-      tech: ["React", "Tailwind CSS", "Chart.js"],
+      title: "Finance Tracker Pro",
+      description: "A production-ready application to take control of personal finances, featuring AES-256-GCM encryption, smart categorization, and advanced spending analytics.",
+      tech: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/IshanAmrit28/ExTracker",
       demo: "https://extracker-jade.vercel.app/"
     },
     {
       title: "4 in a Row Game",
-      description: "A classic strategic multiplayer board game built for the web with an interactive UI and game state management.",
-      tech: ["JavaScript", "HTML5 / CSS3", "Game Logic"],
+      description: "A real-time multiplayer Four in a Row game featuring JWT authentication, a competitive AI bot, automatic reconnection, and an instant rematch functionality.",
+      tech: ["MERN Stack", "WebSockets", "Game AI"],
       github: "https://github.com/IshanAmrit28/FourInARow",
       demo: "https://four-in-a-row-seven.vercel.app/"
     }
