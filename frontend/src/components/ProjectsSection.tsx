@@ -13,8 +13,8 @@ const ProjectsSection = () => {
       title: "Cardiovascular Disease Detection",
       description: "A predictive healthcare application leveraging machine learning models to analyze medical data for early CVD detection.",
       tech: ["Python", "Machine Learning", "Data Modeling"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/IshanAmrit28/CVD-Detection-using-retinal-images",
+      demo: "https://cvd-detection-using-retinal-images.streamlit.app/"
     },
     {
       title: "Naruto Programming Language",
