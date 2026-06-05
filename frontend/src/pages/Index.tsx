@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
-import CertificatesSection from '@/components/CertificatesSection';
+import CodingProfilesSection from '@/components/CodingProfilesSection';
 import ContactSection from '@/components/ContactSection';
 import BackgroundEffects from '@/components/BackgroundEffects';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -21,7 +21,7 @@ const Index = () => {
           <AboutSection />
           <ExperienceSection />
           <ProjectsSection />
-          <CertificatesSection />
+          <CodingProfilesSection />
           <ContactSection />
         </main>
         
